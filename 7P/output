@@ -1,0 +1,1107 @@
+********** PROGRAM OUTPUT ********
++++++++Checking mapTest.cpp++++++++
+
+[==========] Running 26 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 24 tests from MapTest
+[ RUN      ] MapTest.constructorCreatesZeroSizeMap
+[       OK ] MapTest.constructorCreatesZeroSizeMap (0 ms)
+[ RUN      ] MapTest.insertWhileEmptyReturnsTrueAndMapSizeIsOne
+[       OK ] MapTest.insertWhileEmptyReturnsTrueAndMapSizeIsOne (0 ms)
+[ RUN      ] MapTest.insertOfSameKeyReturnsFalseAndMapSizeRemainsSame
+[       OK ] MapTest.insertOfSameKeyReturnsFalseAndMapSizeRemainsSame (0 ms)
+[ RUN      ] MapTest.indexOperatorOfExistingKeyReturnsProperValueAndSizeIsSame
+[       OK ] MapTest.indexOperatorOfExistingKeyReturnsProperValueAndSizeIsSame (0 ms)
+[ RUN      ] MapTest.indexOperatorOnEmptyMapProperlySetsValueAndSizeIsOne
+[       OK ] MapTest.indexOperatorOnEmptyMapProperlySetsValueAndSizeIsOne (0 ms)
+[ RUN      ] MapTest.indexOperatorOnMissingKeyProperlySetsValueAndIncrementsSize
+[       OK ] MapTest.indexOperatorOnMissingKeyProperlySetsValueAndIncrementsSize (0 ms)
+[ RUN      ] MapTest.eraseOfExistingKeyReturnsTrueAndDecrementsSize
+[       OK ] MapTest.eraseOfExistingKeyReturnsTrueAndDecrementsSize (0 ms)
+[ RUN      ] MapTest.eraseOnEmptyMapReturnsFalseAndSizeRemainsZero
+[       OK ] MapTest.eraseOnEmptyMapReturnsFalseAndSizeRemainsZero (0 ms)
+[ RUN      ] MapTest.eraseOfMissingKeyReturnsFalseAndSizeRemainsSame
+[       OK ] MapTest.eraseOfMissingKeyReturnsFalseAndSizeRemainsSame (0 ms)
+[ RUN      ] MapTest.beginOnEmptyMapReturnsSameAsEnd
+[       OK ] MapTest.beginOnEmptyMapReturnsSameAsEnd (0 ms)
+[ RUN      ] MapTest.beginWithDataReturnsItemIteratorNotEqualToEnd
+[       OK ] MapTest.beginWithDataReturnsItemIteratorNotEqualToEnd (0 ms)
+[ RUN      ] MapTest.beginReturnsFirstItemInMapUsingArrowOperator
+[       OK ] MapTest.beginReturnsFirstItemInMapUsingArrowOperator (0 ms)
+[ RUN      ] MapTest.beginReturnsFirstItemInMapUsingDereferenceOperator
+[       OK ] MapTest.beginReturnsFirstItemInMapUsingDereferenceOperator (0 ms)
+[ RUN      ] MapTest.EqualOperatorOnEqualIteratorsReturnsTrue
+[       OK ] MapTest.EqualOperatorOnEqualIteratorsReturnsTrue (0 ms)
+[ RUN      ] MapTest.EqualOperatorOnUnequalIteratorsReturnsFalse
+[       OK ] MapTest.EqualOperatorOnUnequalIteratorsReturnsFalse (0 ms)
+[ RUN      ] MapTest.NotEqualOperatorOnEqualIteratorsReturnsFalse
+[       OK ] MapTest.NotEqualOperatorOnEqualIteratorsReturnsFalse (0 ms)
+[ RUN      ] MapTest.NotEqualOperatorOnUnequalIteratorsReturnsTrue
+[       OK ] MapTest.NotEqualOperatorOnUnequalIteratorsReturnsTrue (0 ms)
+[ RUN      ] MapTest.findOfExistingKeyReturnsIteratorToIt
+[       OK ] MapTest.findOfExistingKeyReturnsIteratorToIt (0 ms)
+[ RUN      ] MapTest.findOfNonExistingKeyReturnsIteratorToEnd
+[       OK ] MapTest.findOfNonExistingKeyReturnsIteratorToEnd (0 ms)
+[ RUN      ] MapTest.copyConstructorMakesCorrectSize
+[       OK ] MapTest.copyConstructorMakesCorrectSize (0 ms)
+[ RUN      ] MapTest.copyConstructorMakesSeparateCopy
+[       OK ] MapTest.copyConstructorMakesSeparateCopy (0 ms)
+[ RUN      ] MapTest.assignmentOperatorMakesCorrectSize
+[       OK ] MapTest.assignmentOperatorMakesCorrectSize (0 ms)
+[ RUN      ] MapTest.assignmentMakesSeparateCopy
+[       OK ] MapTest.assignmentMakesSeparateCopy (0 ms)
+[ RUN      ] MapTest.assignmentWithManyItemsHasCorrectValues
+[       OK ] MapTest.assignmentWithManyItemsHasCorrectValues (1 ms)
+[----------] 24 tests from MapTest (2 ms total)
+
+[----------] 2 tests from mapTest
+[ RUN      ] mapTest.arrowAndDereferenceOperatorsOnSameIteratorWorkEquivalently
+[       OK ] mapTest.arrowAndDereferenceOperatorsOnSameIteratorWorkEquivalently (0 ms)
+[ RUN      ] mapTest.arrowAndDereferenceOperatorsOnEndIteratorWorkEquivalently
+[       OK ] mapTest.arrowAndDereferenceOperatorsOnEndIteratorWorkEquivalently (0 ms)
+[----------] 2 tests from mapTest (1 ms total)
+
+[----------] Global test environment tear-down
+[==========] 26 tests from 2 test cases ran. (3 ms total)
+[  PASSED  ] 26 tests.
+
++++++++Map Test 1++++++++
+
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+		10 2
+
++++++++Valgrind++++++++
+
+==79910== Memcheck, a memory error detector
+==79910== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79910== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79910== Command: ./maptest1
+==79910== 
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+		10 2
+==79910== 
+==79910== HEAP SUMMARY:
+==79910==     in use at exit: 0 bytes in 0 blocks
+==79910==   total heap usage: 13 allocs, 13 frees, 77,680 bytes allocated
+==79910== 
+==79910== All heap blocks were freed -- no leaks are possible
+==79910== 
+==79910== For counts of detected and suppressed errors, rerun with: -v
+==79910== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 2++++++++
+
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+		10 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+		7 1
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+		7 1
+				14 1
+			13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+		7 1
+			14 1
+13 1
+	11 2
+
++++++++++++++++++++++++++++++
+
++++++++Valgrind++++++++
+
+==79912== Memcheck, a memory error detector
+==79912== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79912== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79912== Command: ./maptest2
+==79912== 
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+		10 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+				7 1
+		6 2
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+		7 1
+			15 2
+					14 1
+				13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+		7 1
+				14 1
+			13 1
+12 1
+	11 2
+
++++++++++++++++++++++++++++++
+	9 1
+			8 2
+		7 1
+			14 1
+13 1
+	11 2
+
++++++++++++++++++++++++++++++
+==79912== 
+==79912== HEAP SUMMARY:
+==79912==     in use at exit: 0 bytes in 0 blocks
+==79912==   total heap usage: 13 allocs, 13 frees, 77,680 bytes allocated
+==79912== 
+==79912== All heap blocks were freed -- no leaks are possible
+==79912== 
+==79912== For counts of detected and suppressed errors, rerun with: -v
+==79912== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 3++++++++
+
+
++++++++Valgrind++++++++
+
+==79914== Memcheck, a memory error detector
+==79914== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79914== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79914== Command: ./maptest3
+==79914== 
+==79914== 
+==79914== HEAP SUMMARY:
+==79914==     in use at exit: 0 bytes in 0 blocks
+==79914==   total heap usage: 17 allocs, 17 frees, 73,984 bytes allocated
+==79914== 
+==79914== All heap blocks were freed -- no leaks are possible
+==79914== 
+==79914== For counts of detected and suppressed errors, rerun with: -v
+==79914== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 4++++++++
+
+
++++++++Valgrind++++++++
+
+==79916== Memcheck, a memory error detector
+==79916== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79916== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79916== Command: ./maptest4
+==79916== 
+==79916== 
+==79916== HEAP SUMMARY:
+==79916==     in use at exit: 0 bytes in 0 blocks
+==79916==   total heap usage: 17 allocs, 17 frees, 73,984 bytes allocated
+==79916== 
+==79916== All heap blocks were freed -- no leaks are possible
+==79916== 
+==79916== For counts of detected and suppressed errors, rerun with: -v
+==79916== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 5++++++++
+
+			9 a
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+						33 a
+					31 a
+				3 a
+					27 a
+	21 a
+		2 a
+				17 a
+			12 a
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+						33 a
+					31 a
+				3 a
+					27 a
+	21 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+						33 a
+					31 a
+				3 a
+	21 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+					33 a
+				31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+		8 a
+	61 a
+		49 a
+45 a
+		35 a
+				33 a
+			31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+				33 a
+			31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+			31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+			31 a
+	3 a
+		2 a
+			17 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+	31 a
+		2 a
+			17 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+	31 a
+		17 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+	31 a
+
++++++++++++++++++++++++++++++
+	8 a
+49 a
+		35 a
+	31 a
+
++++++++++++++++++++++++++++++
+	8 a
+49 a
+	35 a
+
++++++++++++++++++++++++++++++
+8 a
+	35 a
+
++++++++++++++++++++++++++++++
+8 a
+
++++++++++++++++++++++++++++++
+
+
++++++++Valgrind++++++++
+
+==79918== Memcheck, a memory error detector
+==79918== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79918== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79918== Command: ./maptest5
+==79918== 
+			9 a
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+						33 a
+					31 a
+				3 a
+					27 a
+	21 a
+		2 a
+				17 a
+			12 a
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+						33 a
+					31 a
+				3 a
+					27 a
+	21 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+						33 a
+					31 a
+				3 a
+	21 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+		8 a
+	61 a
+		49 a
+45 a
+		4 a
+			35 a
+					33 a
+				31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+		8 a
+	61 a
+		49 a
+45 a
+		35 a
+				33 a
+			31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+				33 a
+			31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+			31 a
+	3 a
+		2 a
+				17 a
+			12 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+			31 a
+	3 a
+		2 a
+			17 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+	31 a
+		2 a
+			17 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+	31 a
+		17 a
+
++++++++++++++++++++++++++++++
+	8 a
+		49 a
+45 a
+		35 a
+	31 a
+
++++++++++++++++++++++++++++++
+	8 a
+49 a
+		35 a
+	31 a
+
++++++++++++++++++++++++++++++
+	8 a
+49 a
+	35 a
+
++++++++++++++++++++++++++++++
+8 a
+	35 a
+
++++++++++++++++++++++++++++++
+8 a
+
++++++++++++++++++++++++++++++
+
+==79918== 
+==79918== HEAP SUMMARY:
+==79918==     in use at exit: 0 bytes in 0 blocks
+==79918==   total heap usage: 18 allocs, 18 frees, 78,080 bytes allocated
+==79918== 
+==79918== All heap blocks were freed -- no leaks are possible
+==79918== 
+==79918== For counts of detected and suppressed errors, rerun with: -v
+==79918== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 6++++++++
+
+	5 d
+			35 g
+		30 e
+			25 f
+						23 j
+					22 i
+				21 h
+20 a
+		15 c
+	10 b
+
+------------erase 20------------
+	5 d
+			35 g
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+		15 c
+	10 b
+
+------------erase 15------------
+	5 d
+			35 g
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+	10 b
+
+------------erase 35------------
+	5 d
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+	10 b
+
+------------insert 16-18------------
+	5 d
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+			18 l
+				17 m
+		16 k
+	10 b
+
+------------erase 10------------
+	5 d
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 5------------
+	30 e
+		25 f
+				23 j
+			22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 30------------
+	25 f
+			23 j
+		22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 25------------
+		23 j
+	22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 21------------
+	23 j
+22 i
+		18 l
+			17 m
+	16 k
+
+------------erase 18------------
+	23 j
+22 i
+		17 m
+	16 k
+
+------------erase 17------------
+	23 j
+22 i
+	16 k
+
+------------erase 16------------
+	23 j
+22 i
+
+------------erase 22------------
+23 j
+
+------------erase 23------------
+
+------------erase 23 again------------
+
+
++++++++Valgrind++++++++
+
+==79920== Memcheck, a memory error detector
+==79920== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79920== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79920== Command: ./maptest6
+==79920== 
+	5 d
+			35 g
+		30 e
+			25 f
+						23 j
+					22 i
+				21 h
+20 a
+		15 c
+	10 b
+
+------------erase 20------------
+	5 d
+			35 g
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+		15 c
+	10 b
+
+------------erase 15------------
+	5 d
+			35 g
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+	10 b
+
+------------erase 35------------
+	5 d
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+	10 b
+
+------------insert 16-18------------
+	5 d
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+			18 l
+				17 m
+		16 k
+	10 b
+
+------------erase 10------------
+	5 d
+		30 e
+			25 f
+					23 j
+				22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 5------------
+	30 e
+		25 f
+				23 j
+			22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 30------------
+	25 f
+			23 j
+		22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 25------------
+		23 j
+	22 i
+21 h
+		18 l
+			17 m
+	16 k
+
+------------erase 21------------
+	23 j
+22 i
+		18 l
+			17 m
+	16 k
+
+------------erase 18------------
+	23 j
+22 i
+		17 m
+	16 k
+
+------------erase 17------------
+	23 j
+22 i
+	16 k
+
+------------erase 16------------
+	23 j
+22 i
+
+------------erase 22------------
+23 j
+
+------------erase 23------------
+
+------------erase 23 again------------
+
+==79920== 
+==79920== HEAP SUMMARY:
+==79920==     in use at exit: 0 bytes in 0 blocks
+==79920==   total heap usage: 16 allocs, 16 frees, 77,920 bytes allocated
+==79920== 
+==79920== All heap blocks were freed -- no leaks are possible
+==79920== 
+==79920== For counts of detected and suppressed errors, rerun with: -v
+==79920== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 7++++++++
+
+++++++++new tree++++++++++++
+
+++++++++new tree again++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+				c ice
+		b breeze
+a boy
+
+++++++++tree 1++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+		b breeze
+a boy
+
+++++++++tree 2++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+				c cute
+		b breeze
+a boy
+
+++++++++new tree again++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+		b breeze
+a boy
+
+
++++++++Valgrind++++++++
+
+==79922== Memcheck, a memory error detector
+==79922== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79922== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79922== Command: ./maptest7
+==79922== 
+++++++++new tree++++++++++++
+
+++++++++new tree again++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+				c ice
+		b breeze
+a boy
+
+++++++++tree 1++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+		b breeze
+a boy
+
+++++++++tree 2++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+				c cute
+		b breeze
+a boy
+
+++++++++new tree again++++++++++++
+		z zoo
+			r fire
+	k kite
+			d rose
+		b breeze
+a boy
+
+==79922== 
+==79922== HEAP SUMMARY:
+==79922==     in use at exit: 0 bytes in 0 blocks
+==79922==   total heap usage: 27 allocs, 27 frees, 78,800 bytes allocated
+==79922== 
+==79922== All heap blocks were freed -- no leaks are possible
+==79922== 
+==79922== For counts of detected and suppressed errors, rerun with: -v
+==79922== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Map Test 8 with Valgrind++++++++
+
+==79923== Memcheck, a memory error detector
+==79923== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==79923== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==79923== Command: ./maptest8
+==79923== 
+==79923== 
+==79923== HEAP SUMMARY:
+==79923==     in use at exit: 0 bytes in 0 blocks
+==79923==   total heap usage: 200,003 allocs, 200,003 frees, 16,072,864 bytes allocated
+==79923== 
+==79923== All heap blocks were freed -- no leaks are possible
+==79923== 
+==79923== For counts of detected and suppressed errors, rerun with: -v
+==79923== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+
++++++++Checking mapTest.cpp against some broken code++++++++
+
+[==========] Running 26 tests from 2 test cases.
+[----------] Global test environment set-up.
+[----------] 24 tests from MapTest
+[ RUN      ] MapTest.constructorCreatesZeroSizeMap
+[       OK ] MapTest.constructorCreatesZeroSizeMap (0 ms)
+[ RUN      ] MapTest.insertWhileEmptyReturnsTrueAndMapSizeIsOne
+[       OK ] MapTest.insertWhileEmptyReturnsTrueAndMapSizeIsOne (0 ms)
+[ RUN      ] MapTest.insertOfSameKeyReturnsFalseAndMapSizeRemainsSame
+[       OK ] MapTest.insertOfSameKeyReturnsFalseAndMapSizeRemainsSame (0 ms)
+[ RUN      ] MapTest.indexOperatorOfExistingKeyReturnsProperValueAndSizeIsSame
+[       OK ] MapTest.indexOperatorOfExistingKeyReturnsProperValueAndSizeIsSame (0 ms)
+[ RUN      ] MapTest.indexOperatorOnEmptyMapProperlySetsValueAndSizeIsOne
+[       OK ] MapTest.indexOperatorOnEmptyMapProperlySetsValueAndSizeIsOne (0 ms)
+[ RUN      ] MapTest.indexOperatorOnMissingKeyProperlySetsValueAndIncrementsSize
+[       OK ] MapTest.indexOperatorOnMissingKeyProperlySetsValueAndIncrementsSize (0 ms)
+[ RUN      ] MapTest.eraseOfExistingKeyReturnsTrueAndDecrementsSize
+[       OK ] MapTest.eraseOfExistingKeyReturnsTrueAndDecrementsSize (0 ms)
+[ RUN      ] MapTest.eraseOnEmptyMapReturnsFalseAndSizeRemainsZero
+[       OK ] MapTest.eraseOnEmptyMapReturnsFalseAndSizeRemainsZero (0 ms)
+[ RUN      ] MapTest.eraseOfMissingKeyReturnsFalseAndSizeRemainsSame
+[       OK ] MapTest.eraseOfMissingKeyReturnsFalseAndSizeRemainsSame (0 ms)
+[ RUN      ] MapTest.beginOnEmptyMapReturnsSameAsEnd
+[       OK ] MapTest.beginOnEmptyMapReturnsSameAsEnd (0 ms)
+[ RUN      ] MapTest.beginWithDataReturnsItemIteratorNotEqualToEnd
+mapTest.cpp:107: Failure
+Value of: it != testMap.end()
+  Actual: false
+Expected: true
+[  FAILED  ] MapTest.beginWithDataReturnsItemIteratorNotEqualToEnd (0 ms)
+[ RUN      ] MapTest.beginReturnsFirstItemInMapUsingArrowOperator
+mapTest.cpp:116: Failure
+Value of: aKey
+  Actual: "a"
+Expected: it->key
+Which is: ""
+mapTest.cpp:117: Failure
+Value of: aValue
+  Actual: "alpha"
+Expected: it->data
+Which is: ""
+[  FAILED  ] MapTest.beginReturnsFirstItemInMapUsingArrowOperator (0 ms)
+[ RUN      ] MapTest.beginReturnsFirstItemInMapUsingDereferenceOperator
+mapTest.cpp:126: Failure
+Value of: aKey
+  Actual: "a"
+Expected: (*it).key
+Which is: ""
+mapTest.cpp:127: Failure
+Value of: aValue
+  Actual: "alpha"
+Expected: (*it).data
+Which is: ""
+[  FAILED  ] MapTest.beginReturnsFirstItemInMapUsingDereferenceOperator (0 ms)
+[ RUN      ] MapTest.EqualOperatorOnEqualIteratorsReturnsTrue
+mapTest.cpp:153: Failure
+Value of: it == it2
+  Actual: false
+Expected: true
+[  FAILED  ] MapTest.EqualOperatorOnEqualIteratorsReturnsTrue (0 ms)
+[ RUN      ] MapTest.EqualOperatorOnUnequalIteratorsReturnsFalse
+mapTest.cpp:162: Failure
+Value of: it == it2
+  Actual: true
+Expected: false
+[  FAILED  ] MapTest.EqualOperatorOnUnequalIteratorsReturnsFalse (0 ms)
+[ RUN      ] MapTest.NotEqualOperatorOnEqualIteratorsReturnsFalse
+mapTest.cpp:171: Failure
+Value of: it != it2
+  Actual: true
+Expected: false
+[  FAILED  ] MapTest.NotEqualOperatorOnEqualIteratorsReturnsFalse (0 ms)
+[ RUN      ] MapTest.NotEqualOperatorOnUnequalIteratorsReturnsTrue
+mapTest.cpp:180: Failure
+Value of: it != it2
+  Actual: false
+Expected: true
+[  FAILED  ] MapTest.NotEqualOperatorOnUnequalIteratorsReturnsTrue (0 ms)
+[ RUN      ] MapTest.findOfExistingKeyReturnsIteratorToIt
+mapTest.cpp:189: Failure
+Value of: aKey
+  Actual: "a"
+Expected: it->key
+Which is: ""
+mapTest.cpp:190: Failure
+Value of: aValue
+  Actual: "alpha"
+Expected: (*it).data
+Which is: ""
+[  FAILED  ] MapTest.findOfExistingKeyReturnsIteratorToIt (0 ms)
+[ RUN      ] MapTest.findOfNonExistingKeyReturnsIteratorToEnd
+mapTest.cpp:199: Failure
+Value of: it == testMap.end()
+  Actual: false
+Expected: true
+[  FAILED  ] MapTest.findOfNonExistingKeyReturnsIteratorToEnd (0 ms)
+[ RUN      ] MapTest.copyConstructorMakesCorrectSize
+[       OK ] MapTest.copyConstructorMakesCorrectSize (0 ms)
+[ RUN      ] MapTest.copyConstructorMakesSeparateCopy
+[       OK ] MapTest.copyConstructorMakesSeparateCopy (0 ms)
+[ RUN      ] MapTest.assignmentOperatorMakesCorrectSize
+[       OK ] MapTest.assignmentOperatorMakesCorrectSize (0 ms)
+[ RUN      ] MapTest.assignmentMakesSeparateCopy
+[       OK ] MapTest.assignmentMakesSeparateCopy (0 ms)
+[ RUN      ] MapTest.assignmentWithManyItemsHasCorrectValues
+[       OK ] MapTest.assignmentWithManyItemsHasCorrectValues (2 ms)
+[----------] 24 tests from MapTest (2 ms total)
+
+[----------] 2 tests from mapTest
+[ RUN      ] mapTest.arrowAndDereferenceOperatorsOnSameIteratorWorkEquivalently
+[       OK ] mapTest.arrowAndDereferenceOperatorsOnSameIteratorWorkEquivalently (0 ms)
+[ RUN      ] mapTest.arrowAndDereferenceOperatorsOnEndIteratorWorkEquivalently
+[       OK ] mapTest.arrowAndDereferenceOperatorsOnEndIteratorWorkEquivalently (0 ms)
+[----------] 2 tests from mapTest (0 ms total)
+
+[----------] Global test environment tear-down
+[==========] 26 tests from 2 test cases ran. (2 ms total)
+[  PASSED  ] 17 tests.
+[  FAILED  ] 9 tests, listed below:
+[  FAILED  ] MapTest.beginWithDataReturnsItemIteratorNotEqualToEnd
+[  FAILED  ] MapTest.beginReturnsFirstItemInMapUsingArrowOperator
+[  FAILED  ] MapTest.beginReturnsFirstItemInMapUsingDereferenceOperator
+[  FAILED  ] MapTest.EqualOperatorOnEqualIteratorsReturnsTrue
+[  FAILED  ] MapTest.EqualOperatorOnUnequalIteratorsReturnsFalse
+[  FAILED  ] MapTest.NotEqualOperatorOnEqualIteratorsReturnsFalse
+[  FAILED  ] MapTest.NotEqualOperatorOnUnequalIteratorsReturnsTrue
+[  FAILED  ] MapTest.findOfExistingKeyReturnsIteratorToIt
+[  FAILED  ] MapTest.findOfNonExistingKeyReturnsIteratorToEnd
+
+ 9 FAILED TESTS

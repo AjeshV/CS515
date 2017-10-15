@@ -1,0 +1,38 @@
+#!/bin/bash -f
+
+echo
+echo "+++++++Map test 1++++++++" 
+./maptest1
+echo "+++++++Map test 2++++++++" 
+./maptest2
+echo "+++++++Map test 3++++++++" 
+./maptest3
+echo "+++++++Map test 4++++++++" 
+./maptest4
+echo "+++++++Map test 5++++++++" 
+./maptest5
+echo "+++++++Map test 6++++++++" 
+./maptest6
+echo "+++++++Map test 7++++++++" 
+./maptest7
+echo "+++++++Map test 8++++++++" 
+./maptest8
+
+echo "+++++++Valgrind 1++++++++" 
+valgrind ./maptest1
+
+echo "+++++++Valgrind 2++++++++" 
+valgrind ./maptest2
+
+echo "+++++++Valgrind 3++++++++" 
+valgrind ./maptest3
+
+echo "+++++++Valgrind 5++++++++" 
+valgrind ./maptest5
+
+echo "+++++++Valgrind 7++++++++" 
+valgrind ./maptest7
+
+echo "+++++++Valgrind 8++++++++" 
+valgrind ./maptest8
+

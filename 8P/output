@@ -1,0 +1,308 @@
+********** PROGRAM OUTPUT ********
++++++++Map Test 1++++++++
++++++++Valgrind++++++++
+==122442== Memcheck, a memory error detector
+==122442== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122442== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122442== Command: ./maptest1
+==122442== 
+==122442== 
+==122442== HEAP SUMMARY:
+==122442==     in use at exit: 0 bytes in 0 blocks
+==122442==   total heap usage: 38 allocs, 38 frees, 73,888 bytes allocated
+==122442== 
+==122442== All heap blocks were freed -- no leaks are possible
+==122442== 
+==122442== For counts of detected and suppressed errors, rerun with: -v
+==122442== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
++++++++Map Test 2++++++++
+6 7 8 9 10 11 12 13 14 15 17 18 19 20 21 25 44 54 55 97 
++++++++Valgrind++++++++
+==122444== Memcheck, a memory error detector
+==122444== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122444== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122444== Command: ./maptest2
+==122444== 
+6 7 8 9 10 11 12 13 14 15 17 18 19 20 21 25 44 54 55 97 
+==122444== 
+==122444== HEAP SUMMARY:
+==122444==     in use at exit: 0 bytes in 0 blocks
+==122444==   total heap usage: 23 allocs, 23 frees, 77,472 bytes allocated
+==122444== 
+==122444== All heap blocks were freed -- no leaks are possible
+==122444== 
+==122444== For counts of detected and suppressed errors, rerun with: -v
+==122444== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
++++++++Map Test 3++++++++
+1 2 3 4 12 17 21 28 31 33 35 39 44 45 49 
++++++++Valgrind++++++++
+==122446== Memcheck, a memory error detector
+==122446== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122446== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122446== Command: ./maptest3
+==122446== 
+1 2 3 4 12 17 21 28 31 33 35 39 44 45 49 
+==122446== 
+==122446== HEAP SUMMARY:
+==122446==     in use at exit: 0 bytes in 0 blocks
+==122446==   total heap usage: 18 allocs, 18 frees, 77,312 bytes allocated
+==122446== 
+==122446== All heap blocks were freed -- no leaks are possible
+==122446== 
+==122446== For counts of detected and suppressed errors, rerun with: -v
+==122446== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
++++++++Map Test 4++++++++
+1 2 3 4 12 17 21 28 31 33 35 39 44 45 49 
++++++++Valgrind++++++++
+==122448== Memcheck, a memory error detector
+==122448== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122448== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122448== Command: ./maptest4
+==122448== 
+==122448== Conditional jump or move depends on uninitialised value(s)
+==122448==    at 0x401E4C: Map<int, int>::operator[](int) (in /home/csadmin/cs515/assignments/8P/example/cs515-8Pa-dir/maptest4)
+==122448==    by 0x400B34: main (in /home/csadmin/cs515/assignments/8P/example/cs515-8Pa-dir/maptest4)
+==122448== 
+1 2 3 4 12 17 21 28 31 33 35 39 44 45 49 
+==122448== 
+==122448== HEAP SUMMARY:
+==122448==     in use at exit: 0 bytes in 0 blocks
+==122448==   total heap usage: 18 allocs, 18 frees, 77,312 bytes allocated
+==122448== 
+==122448== All heap blocks were freed -- no leaks are possible
+==122448== 
+==122448== For counts of detected and suppressed errors, rerun with: -v
+==122448== Use --track-origins=yes to see where uninitialised values come from
+==122448== ERROR SUMMARY: 1 errors from 1 contexts (suppressed: 0 from 0)
++++++++Map Test 5++++++++
+2 3 4 8 12 17 21 27 31 33 35 45 49 61 
+2 3 4 8 12 17 21 31 33 35 45 49 61 
+2 3 4 8 12 17 31 33 35 45 49 61 
+2 3 8 12 17 31 33 35 45 49 61 
+2 3 8 12 17 31 33 35 45 49 
+2 3 8 12 17 31 35 45 49 
+2 3 8 17 31 35 45 49 
+2 8 17 31 35 45 49 
+8 17 31 35 45 49 
+8 31 35 45 49 
+8 31 35 49 
+8 35 49 
+8 35 
+8 
+
++++++++Valgrind++++++++
+==122450== Memcheck, a memory error detector
+==122450== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122450== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122450== Command: ./maptest5
+==122450== 
+2 3 4 8 12 17 21 27 31 33 35 45 49 61 
+2 3 4 8 12 17 21 31 33 35 45 49 61 
+2 3 4 8 12 17 31 33 35 45 49 61 
+2 3 8 12 17 31 33 35 45 49 61 
+2 3 8 12 17 31 33 35 45 49 
+2 3 8 12 17 31 35 45 49 
+2 3 8 17 31 35 45 49 
+2 8 17 31 35 45 49 
+8 17 31 35 45 49 
+8 31 35 45 49 
+8 31 35 49 
+8 35 49 
+8 35 
+8 
+
+==122450== 
+==122450== HEAP SUMMARY:
+==122450==     in use at exit: 0 bytes in 0 blocks
+==122450==   total heap usage: 18 allocs, 18 frees, 77,312 bytes allocated
+==122450== 
+==122450== All heap blocks were freed -- no leaks are possible
+==122450== 
+==122450== For counts of detected and suppressed errors, rerun with: -v
+==122450== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
++++++++Map Test 6++++++++
+4 5 6 9 11 12 13 15 17 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 5 6 9 11 12 13 15 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 5 6 9 11 12 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 6 9 11 12 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 54 64 78 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 64 78 
+4 6 9 11 13 20 21 23 29 33 40 42 45 46 64 78 
+4 6 9 11 20 21 23 29 33 40 42 45 46 64 78 
+4 6 9 11 21 23 29 33 40 42 45 46 64 78 
+4 6 9 11 21 23 29 33 42 45 46 64 78 
+4 6 9 11 21 23 29 33 42 45 64 78 
+4 6 9 11 21 23 29 33 42 45 78 
+4 6 9 21 23 29 33 42 45 78 
+4 6 9 21 29 33 42 45 78 
+4 6 21 29 33 42 45 78 
+4 6 21 29 42 45 78 
+4 6 21 29 42 45 
+4 6 21 29 42 
+4 6 29 42 
+6 29 42 
+6 42 
+42 
+
++++++++Valgrind++++++++
+==122453== Memcheck, a memory error detector
+==122453== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122453== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122453== Command: ./maptest6
+==122453== 
+4 5 6 9 11 12 13 15 17 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 5 6 9 11 12 13 15 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 5 6 9 11 12 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 6 9 11 12 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 85 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 54 64 77 78 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 54 64 78 
+4 6 9 11 13 20 21 23 28 29 33 40 42 45 46 64 78 
+4 6 9 11 13 20 21 23 29 33 40 42 45 46 64 78 
+4 6 9 11 20 21 23 29 33 40 42 45 46 64 78 
+4 6 9 11 21 23 29 33 40 42 45 46 64 78 
+4 6 9 11 21 23 29 33 42 45 46 64 78 
+4 6 9 11 21 23 29 33 42 45 64 78 
+4 6 9 11 21 23 29 33 42 45 78 
+4 6 9 21 23 29 33 42 45 78 
+4 6 9 21 29 33 42 45 78 
+4 6 21 29 33 42 45 78 
+4 6 21 29 42 45 78 
+4 6 21 29 42 45 
+4 6 21 29 42 
+4 6 29 42 
+6 29 42 
+6 42 
+42 
+
+==122453== 
+==122453== HEAP SUMMARY:
+==122453==     in use at exit: 0 bytes in 0 blocks
+==122453==   total heap usage: 28 allocs, 28 frees, 77,632 bytes allocated
+==122453== 
+==122453== All heap blocks were freed -- no leaks are possible
+==122453== 
+==122453== For counts of detected and suppressed errors, rerun with: -v
+==122453== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
++++++++Map Test 7++++++++
+5 10 15 20 21 22 23 25 30 35 
+------------erase 20------------
+5 10 15 21 22 23 25 30 35 
+------------erase 15------------
+5 10 21 22 23 25 30 35 
+------------erase 35------------
+5 10 21 22 23 25 30 
+------------insert 16-18------------
+5 10 16 17 18 21 22 23 25 30 
+------------erase 10------------
+5 16 17 18 21 22 23 25 30 
+------------erase 5------------
+16 17 18 21 22 23 25 30 
+------------erase 30------------
+16 17 18 21 22 23 25 
+------------erase 25------------
+16 17 18 21 22 23 
+------------erase 21------------
+16 17 18 22 23 
+------------erase 18------------
+16 17 22 23 
+------------erase 17------------
+16 22 23 
+------------erase 16------------
+22 23 
+------------erase 22------------
+23 
+------------erase 23------------
+
+------------erase 23 again------------
++++++++Valgrind++++++++
+==122455== Memcheck, a memory error detector
+==122455== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122455== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122455== Command: ./maptest7
+==122455== 
+5 10 15 20 21 22 23 25 30 35 
+------------erase 20------------
+5 10 15 21 22 23 25 30 35 
+------------erase 15------------
+5 10 21 22 23 25 30 35 
+------------erase 35------------
+5 10 21 22 23 25 30 
+------------insert 16-18------------
+5 10 16 17 18 21 22 23 25 30 
+------------erase 10------------
+5 16 17 18 21 22 23 25 30 
+------------erase 5------------
+16 17 18 21 22 23 25 30 
+------------erase 30------------
+16 17 18 21 22 23 25 
+------------erase 25------------
+16 17 18 21 22 23 
+------------erase 21------------
+16 17 18 22 23 
+------------erase 18------------
+16 17 22 23 
+------------erase 17------------
+16 22 23 
+------------erase 16------------
+22 23 
+------------erase 22------------
+23 
+------------erase 23------------
+
+------------erase 23 again------------
+==122455== 
+==122455== HEAP SUMMARY:
+==122455==     in use at exit: 0 bytes in 0 blocks
+==122455==   total heap usage: 16 allocs, 16 frees, 77,696 bytes allocated
+==122455== 
+==122455== All heap blocks were freed -- no leaks are possible
+==122455== 
+==122455== For counts of detected and suppressed errors, rerun with: -v
+==122455== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
++++++++Map Test 8++++++++
+++++++++m2++++++++++++
+
+++++++++m2 after assignment++++++++++++
+a b c d k r z 
+++++++++m1 after modificiation++++++++++++
+a b d k r z 
+++++++++m2 after modificiation++++++++++++
+a b c d k r z 
+++++++++m2 after modificiation++++++++++++
+a b c d haha k r z 
+++++++++m2 after modificiation again++++++++++++
+a b d k r z 
+++++++++m1 after modificiation again++++++++++++
+a b d k r z 
++++++++Valgrind++++++++
+==122457== Memcheck, a memory error detector
+==122457== Copyright (C) 2002-2015, and GNU GPL'd, by Julian Seward et al.
+==122457== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==122457== Command: ./maptest8
+==122457== 
+++++++++m2++++++++++++
+
+++++++++m2 after assignment++++++++++++
+a b c d k r z 
+++++++++m1 after modificiation++++++++++++
+a b d k r z 
+++++++++m2 after modificiation++++++++++++
+a b c d k r z 
+++++++++m2 after modificiation++++++++++++
+a b c d haha k r z 
+++++++++m2 after modificiation again++++++++++++
+a b d k r z 
+++++++++m1 after modificiation again++++++++++++
+a b d k r z 
+==122457== 
+==122457== HEAP SUMMARY:
+==122457==     in use at exit: 0 bytes in 0 blocks
+==122457==   total heap usage: 53 allocs, 53 frees, 80,872 bytes allocated
+==122457== 
+==122457== All heap blocks were freed -- no leaks are possible
+==122457== 
+==122457== For counts of detected and suppressed errors, rerun with: -v
+==122457== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
